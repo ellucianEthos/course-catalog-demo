@@ -114,7 +114,6 @@ class Ethos {
             }
 
             if (response) {
-                //console.log(response);
                 data = data.concat(response.data);
 
                 if (!total) {
@@ -292,12 +291,9 @@ class Ethos {
     }
 
     async getSections(jwt, academicPeriodId) {
-        //console.log("getSections()",academicPeriodId,jwt);
 
         // banner let url = `https://integrate.elluciancloud.com/api/sections?criteria={ "academicPeriod" : "${academicPeriodId}"}`;
         let url = `https://integrate.elluciancloud.com/api/sections?criteria={ "academicPeriod" :  { "id": "${academicPeriodId}"} }`;
-
-        //console.log(url);
 
         let result = await axios({
             method: 'get',
@@ -487,25 +483,6 @@ class Ethos {
         }
     }
 
-    getTestSearchResults() {
-        let results = [];
-        let result = this.getEmptySearchResult();
-        results.push(result);
-
-        result = this.getEmptySearchResult();
-        result.id = "111";
-        result.title = "Math 101";
-        result.courseId = "111";
-        result.courseTitle = "Math 101";
-        result.courseDesc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet";
-        result.subject = "Mathematics";
-        result.schedule = "M W F 10:00 AM";
-        result.location = "Smith Hall, Room 100";
-        results.push(result);
-
-        return results;
-    }
-
     createEmptySearchResult() {
         return {
             id: "",
@@ -662,23 +639,6 @@ class Ethos {
         }
         return label;
     }
-
-    // formatLocation(instructionalEvent) {
-    //     let label = "";
-    //     if (instructionalEvent.locations && instructionalEvent.locations.length > 0) {
-    //         if (instructionalEvent.locations[0].location) {
-    //             let location = instructionalEvent.locations[0].location;
-    //             if (location.room && location.room.id) {
-    //                 label = location.room.id;
-    //                 let room = this.findRoom(location.room.id);
-    //
-    //                 console.log("room", room);
-    //             }
-    //         }
-    //     }
-    //     console.log("formatLocation()", label);
-    //     return label;
-    // }
 
 }
 

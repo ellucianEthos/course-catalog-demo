@@ -15,6 +15,8 @@ npm install
 
 npm run start
 ```
+A new browser window should pop up with the app.  If it does not, simply create a new browser window and navigate to http://localhost:3000.
+
 ## Description
 
 The course catalog demo is a simple React web app that makes api calls to Ethos Integration. The user is allowed to select from a list of academic periods and click the search button. The app will then make several api calls to build up a descriptive display of all the course sections that are available in that academic period.
