@@ -1,0 +1,405 @@
+{
+	"info": {
+		"_postman_id": "94c7cef8-45d1-45e9-96d6-d8221d44a774",
+		"name": "Course Catalog Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "320b8d16-a790-4561-8a21-e8f3677f6fb2",
+						"type": "text/javascript",
+						"exec": [
+							"pm.environment.set(\"demo_jwt\",  pm.response.text());",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer your-api-key-here"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://integrate.elluciancloud.com/auth",
+					"protocol": "https",
+					"host": [
+						"integrate",
+						"elluciancloud",
+						"com"
+					],
+					"path": [
+						"auth"
+					]
+				},
+				"description": "Auth"
+			},
+			"response": []
+		},
+		{
+			"name": "Sections",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{demo_jwt}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://integrate.elluciancloud.com/api/sections",
+					"protocol": "https",
+					"host": [
+						"integrate",
+						"elluciancloud",
+						"com"
+					],
+					"path": [
+						"api",
+						"sections"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sections with LIMIT and OFFSET",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{demo_jwt}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://integrate.elluciancloud.com/api/sections?offset=100&limit=50",
+					"protocol": "https",
+					"host": [
+						"integrate",
+						"elluciancloud",
+						"com"
+					],
+					"path": [
+						"api",
+						"sections"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "100"
+						},
+						{
+							"key": "limit",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Courses",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{demo_jwt}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://integrate.elluciancloud.com/api/courses",
+					"protocol": "https",
+					"host": [
+						"integrate",
+						"elluciancloud",
+						"com"
+					],
+					"path": [
+						"api",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subjects",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{demo_jwt}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://integrate.elluciancloud.com/api/subjects",
+					"protocol": "https",
+					"host": [
+						"integrate",
+						"elluciancloud",
+						"com"
+					],
+					"path": [
+						"api",
+						"subjects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rooms",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{demo_jwt}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://integrate.elluciancloud.com/api/rooms",
+					"protocol": "https",
+					"host": [
+						"integrate",
+						"elluciancloud",
+						"com"
+					],
+					"path": [
+						"api",
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buildings",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{demo_jwt}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://integrate.elluciancloud.com/api/buildings",
+					"protocol": "https",
+					"host": [
+						"integrate",
+						"elluciancloud",
+						"com"
+					],
+					"path": [
+						"api",
+						"buildings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sites",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{demo_jwt}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://integrate.elluciancloud.com/api/sites",
+					"protocol": "https",
+					"host": [
+						"integrate",
+						"elluciancloud",
+						"com"
+					],
+					"path": [
+						"api",
+						"sites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Academic Periods",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{demo_jwt}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://integrate.elluciancloud.com/api/academic-periods",
+					"protocol": "https",
+					"host": [
+						"integrate",
+						"elluciancloud",
+						"com"
+					],
+					"path": [
+						"api",
+						"academic-periods"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Instructional Events",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{demo_jwt}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://integrate.elluciancloud.com/api/instructional-events",
+					"protocol": "https",
+					"host": [
+						"integrate",
+						"elluciancloud",
+						"com"
+					],
+					"path": [
+						"api",
+						"instructional-events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query Sections by Academic Period",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{demo_jwt}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://integrate.elluciancloud.com/api/sections?criteria={\"academicPeriod\": {\"id\" : \"733be6ca-8261-45f5-bb76-f45192c736de\" }}",
+					"protocol": "https",
+					"host": [
+						"integrate",
+						"elluciancloud",
+						"com"
+					],
+					"path": [
+						"api",
+						"sections"
+					],
+					"query": [
+						{
+							"key": "criteria",
+							"value": "{\"academicPeriod\": {\"id\" : \"733be6ca-8261-45f5-bb76-f45192c736de\" }}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query  Instructional Events by Section",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{demo_jwt}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://integrate.elluciancloud.com/api/instructional-events?criteria={\"section\": {\"id\" : \"1076dc2d-8385-4cc5-8871-3ebdd2e108ae\" }}",
+					"protocol": "https",
+					"host": [
+						"integrate",
+						"elluciancloud",
+						"com"
+					],
+					"path": [
+						"api",
+						"instructional-events"
+					],
+					"query": [
+						{
+							"key": "criteria",
+							"value": "{\"section\": {\"id\" : \"1076dc2d-8385-4cc5-8871-3ebdd2e108ae\" }}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

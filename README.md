@@ -6,7 +6,7 @@ This demo web application uses Ethos Integration to build a course catalog.
 
 ## Installing / Getting started
 
-This project uses node and npm.  To get started clone the repository and run the following commands.
+This project uses node and npm.  To get started clone the repository and run the following commands. Note - a valid Ethos Integration api key needs to be added to the code for this to work.
 
 ```shell
 npm install
