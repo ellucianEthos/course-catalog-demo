@@ -6,7 +6,9 @@ This demo web application uses Ethos Integration to build a course catalog.
 
 ## Installing / Getting started
 
-This project uses node and npm.  To get started clone the repository and run the following commands. Note - a valid Ethos Integration api key needs to be added to the code for this to work.
+This project uses node and npm.  To get started clone the repository and run the following commands.
+
+*Note - a valid Ethos Integration api key needs to be added to src/index.js for the app to work.*
 
 ```shell
 npm install
@@ -19,6 +21,6 @@ The course catalog demo is a simple React web app that makes api calls to Ethos 
 
 ## Notes about the code
 
-A basic knowledge of React and/or web apps will be helpful understanding the code.
+A basic knowledge of React and/or web apps will be helpful understanding the code. The app is built from the Create React App tool (https://github.com/facebook/create-react-app) and uses Material UI component library (https://www.material-ui.com).
 
-TBD
+The design of the app does not reflect what a production application should look like. It is not a reference implementation. It is meant to illustrate how api calls can be made to Ethos Integration and do something useful.

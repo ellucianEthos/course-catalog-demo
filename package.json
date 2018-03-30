@@ -1,6 +1,6 @@
 {
-  "name": "elive-2018-demo",
-  "version": "0.1.0",
+  "name": "course-catalog-demo",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
